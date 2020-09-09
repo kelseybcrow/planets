@@ -23,6 +23,7 @@ export function RegisterControllers(router) {
       let fileHandler = await import(Paths.Controllers + "/" + controllerName);
       let controllerClass = fileHandler[controllerName.slice(0, -3)];
       let controller = new controllerClass();
+      console.log(controllerName);
       if (controller instanceof BaseController) {
         router.use(controller.mount, controller.router);
       }

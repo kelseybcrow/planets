@@ -1,8 +1,8 @@
-import ValueSchema from "../models/Value";
+import PlanetSchema from "../models/Planet";
 import mongoose from "mongoose";
 
 class DbContext {
-  Values = mongoose.model("Value", ValueSchema);
+  Planets = mongoose.model("Value", PlanetSchema);
 }
 
 export const dbContext = new DbContext();
